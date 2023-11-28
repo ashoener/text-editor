@@ -1,5 +1,5 @@
 {
   "subdomain": "text-editor",
-  "install": "npm install",
-  "start": "npm start"
+  "install": "npm install && npm run build",
+  "start": "cd server && bun server.js"
 }
