@@ -211,5 +211,5 @@ h1 {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
