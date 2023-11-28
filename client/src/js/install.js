@@ -1,6 +1,4 @@
 const butInstall = document.getElementById("buttonInstall");
-// Hide the install button by default
-butInstall.classList.toggle("hidden", true);
 
 let deferredPrompt = null;
 
@@ -11,7 +9,7 @@ window.addEventListener("beforeinstallprompt", (event) => {
   // Stash the event so it can be triggered later.
   deferredPrompt = event;
   // Update UI notify the user they can add to home screen
-  butInstall.classList.toggle("hidden", false);
+  //   butInstall.classList.toggle("hidden", false);
 });
 
 butInstall.addEventListener("click", async () => {
