@@ -1,0 +1,5 @@
+{
+  "subdomain": "text-editor",
+  "install": "npm install",
+  "start": "npm start"
+}
