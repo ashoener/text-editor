@@ -22,9 +22,9 @@ export const putDb = async (content) => {
 export const getDb = async () => {
   const db = await initdb();
   const tx = db.transaction("jate", "readonly");
-  const { content } = await tx.store.get(0);
+  const data = await tx.store.get(0);
   await tx.done;
-  return content;
+  return data?.content || "";
 };
 
 initdb();
