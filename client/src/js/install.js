@@ -1,4 +1,5 @@
 const butInstall = document.getElementById("buttonInstall");
+// Hide the install button by default
 butInstall.classList.toggle("hidden", true);
 
 let deferredPrompt = null;
@@ -15,8 +16,11 @@ window.addEventListener("beforeinstallprompt", (event) => {
 
 butInstall.addEventListener("click", async () => {
   if (!deferredPrompt) return;
+  // Show the prompt
   deferredPrompt.prompt();
+  // Set the prompt to null because it can only be used once
   deferredPrompt = null;
+  // Hide the button
   butInstall.classList.toggle("hidden", true);
 });
 
